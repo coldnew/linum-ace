@@ -1,0 +1,38 @@
+#+OPTIONS: num:nil
+#+STARTUP: odd
+#+Style: <style> h1,h2,h3 {font-family: arial, helvetica, sans-serif} </style>
+
+* Overview
+
+linum-ace is a linum plugin which inspired from ace-jump-mode,
+but you can use this plugin without install ace-jump-mode.
+
+* Installation
+
+Download linum-ace from Github
+
+: git clone https://github.com/coldnew/linum-ace.git
+
+Add linum-ace directory to your load path and then add
+
+: (require 'linum-ace)
+
+to your dot emacs.
+
+* Usage
+
+linum-ace will not auto show on linum-mode by default.
+
+you can use linum-ace-toggle to toggle linum-ace or
+
+default linum-format. If you want to always use linum-ace
+
+put following code in your .emacs
+
+: (setq linum-format 'linum-ace)
+
+* Screenshot
+
+Following are the screenshot
+
+[[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot.jpg]]
