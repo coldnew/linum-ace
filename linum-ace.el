@@ -73,7 +73,7 @@ lower case character and digits
 ;;;; Functions
 
 (defun linum-ace-search-candidate ()
-  "Search NOT-EMPTY-LINE in current window, and return the cons cell of
+  "Search NONE-EMPTY-LINE in current window, and return the cons cell of
 candiate position and key."
   (let* ((start-point (window-start (selected-window) ))
 	 (end-point   (window-end   (selected-window) t)))
