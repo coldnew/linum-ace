@@ -35,4 +35,4 @@ put following code in your .emacs
 
 Following are the screenshot
 
-[[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot.jpg]]
+[[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot1.jpg]]
