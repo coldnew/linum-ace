@@ -2,16 +2,16 @@
 #+STARTUP: odd
 #+Style: <style> h1,h2,h3 {font-family: arial, helvetica, sans-serif} </style>
 
-* Overview
+* 關於 linum-ace
 
-linum-ace is a linum plugin which inspired from ace-jump-mode,
-but you can use this plugin without install ace-jump-mode.
+linum-ace 是我在使用 ace-jump-mode 裡面的 ace-jump-line-mode 所獲得的啟發，會在 emacs 顯示行號
 
-(for chinese user, you can see chinese README)
+的地方顯示 "行字元" 來代表該行 (僅在非空白行顯示)，具體請見下面的截圖。
 
-* Installation (Traditional Way)
 
-Download linum-ace from Github
+* 安裝方式 (傳統方法)
+
+從 GitHub 下載 linum-ace
 
 : git clone https://github.com/coldnew/linum-ace.git
 
@@ -19,9 +19,9 @@ Add linum-ace directory to your load path and then add following code to your do
 
 : (require 'linum-ace)
 
-* Installation (el-get Users)
+* 安裝方式 (el-get Users)
 
-If you are el-get user, you can simply create a recips to install linum-ace.
+如果你是 el-get 的使用者，可以將以下程式加入你的 recipes，並使用 el-get-install 進行安裝。
 
 : (:name linum-ace
 :        :type github
@@ -36,9 +36,9 @@ default linum-format. If you want to always use linum-ace put following code in 
 
 : (setq linum-format 'linum-ace)
 
-* Screenshot
+* 截圖
 
-Following are the screenshot
+下圖為使用 linum-ace 的截圖
 
 [[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot1.jpg]]
 
