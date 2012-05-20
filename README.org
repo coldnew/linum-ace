@@ -17,17 +17,20 @@ Add linum-ace directory to your load path and then add
 
 : (require 'linum-ace)
 
-to your dot emacs.
+to your dot emacs config.
+
+If you are el-get user, you can simply create a recips to install linum-ace.
+
+: (:name linum-ace
+:        :type github
+:        :pkgname coldnew/linum-ace
+:        :features linum-ace)
 
 * Usage
 
-linum-ace will not auto show on linum-mode by default.
+linum-ace will not auto show on linum-mode by default. You can use linum-ace-toggle to toggle linum-ace or
 
-you can use linum-ace-toggle to toggle linum-ace or
-
-default linum-format. If you want to always use linum-ace
-
-put following code in your .emacs
+default linum-format. If you want to always use linum-ace put following code in your .emacs
 
 : (setq linum-format 'linum-ace)
 
@@ -36,3 +39,9 @@ put following code in your .emacs
 Following are the screenshot
 
 [[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot1.jpg]]
+
+
+
+
+
+
