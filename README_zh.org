@@ -19,7 +19,7 @@ Add linum-ace directory to your load path and then add following code to your do
 
 : (require 'linum-ace)
 
-* 安裝方式 (el-get Users)
+* 安裝方式 (el-get 使用者)
 
 如果你是 el-get 的使用者，可以將以下程式加入你的 recipes，並使用 el-get-install 進行安裝。
 
@@ -36,11 +36,33 @@ default linum-format. If you want to always use linum-ace put following code in 
 
 : (setq linum-format 'linum-ace)
 
+* 客製化
+
+linum-ace 目前提供兩個變數供使用者客製化。 你可以修改 linum-ace-face 來設定顯示行號的文字的顏色，
+
+預設和 ace-jump-mode 一樣是使用 "紅色" 作為行字元的顯示方式。
+
+linum-ace-keys 則是用來設定顯示在行號欄位的 *行字元*，預設情況和 ace-jump-mode 相同，均是顯示
+
+a~z 以及 A~Z 的字元，如果你有修改過 ace-jump-mode 的 ace-jump-mode-move-keys 的話，你可以使用
+
+下面的程式讓 linum-ace 和 ace-jump-mode 顯示相同的字元。
+
+: (setq linum-ace-keys ace-jump-mode-move-keys)
+
+當然，你也可以做自己的設定，linum-ace-jump 會根據你自己的設定來進行跳轉的動作。舉例來說，我要顯示
+
+0~9 以及 a~z 在行號欄位，則可以使用下面的設定
+
+: (setq linum-ace-keys (nconc (number-sequence ?0 ?9)
+:                             (number-sequence ?a ?z)))
+
 * 截圖
 
 下圖為使用 linum-ace 的截圖
 
 [[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot1.jpg]]
+
 
 
 
