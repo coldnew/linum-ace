@@ -7,17 +7,17 @@
 linum-ace is a linum plugin which inspired from ace-jump-mode,
 but you can use this plugin without install ace-jump-mode.
 
-* Installation
+* Installation (Traditioal Way)
 
 Download linum-ace from Github
 
 : git clone https://github.com/coldnew/linum-ace.git
 
-Add linum-ace directory to your load path and then add
+Add linum-ace directory to your load path and then add following code to your dot emacs config.
 
 : (require 'linum-ace)
 
-to your dot emacs config.
+* Installation (el-get Users)
 
 If you are el-get user, you can simply create a recips to install linum-ace.
 
