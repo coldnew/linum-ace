@@ -7,7 +7,7 @@
 linum-ace is a linum plugin which inspired from ace-jump-mode,
 but you can use this plugin without install ace-jump-mode.
 
-* Installation (Traditioal Way)
+* Installation (Traditional Way)
 
 Download linum-ace from Github
 
@@ -39,6 +39,8 @@ default linum-format. If you want to always use linum-ace put following code in 
 Following are the screenshot
 
 [[https://github.com/coldnew/linum-ace/raw/master/screenshot/screenshot1.jpg]]
+
+
 
 
 
