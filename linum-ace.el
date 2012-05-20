@@ -91,7 +91,7 @@ candiate position and key."
   (let* ((linum-ace-char
 	  (or
 	   (cdr-safe (assoc line-number linum-ace-alist))
-	   ?\ )))
+	   ?\s)))
     (propertize (format "%2s " (char-to-string linum-ace-char ))
 		'face 'linum-ace-face)))
 
