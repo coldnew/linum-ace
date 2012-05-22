@@ -15,7 +15,7 @@ linum-ace 是我在使用 ace-jump-mode 裡面的 ace-jump-line-mode 所獲得�
 
 : git clone https://github.com/coldnew/linum-ace.git
 
-Add linum-ace directory to your load path and then add following code to your dot emacs config.
+將 linum-ace 加入你的 emacs路徑後，並將下列 code加入你的 .emacs
 
 : (require 'linum-ace)
 
@@ -28,11 +28,11 @@ Add linum-ace directory to your load path and then add following code to your do
 :        :pkgname coldnew/linum-ace
 :        :features linum-ace)
 
-* Usage
+* 使用
 
-linum-ace will not auto show on linum-mode by default. You can use linum-ace-toggle to toggle linum-ace or
+預設情況下，linum-ace是不會直接顯示在行號欄上的，你可以使用 *linum-ace-toggle* 來進行原始的行號顯示，
 
-default linum-format. If you want to always use linum-ace put following code in your .emacs
+以及 linum-ace 的切換。如果您希望 linum-ace預設是直接顯示在行號欄上，請將下一行 code加入至你的 emacs 設定
 
 : (setq linum-format 'linum-ace)
 
