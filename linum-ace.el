@@ -50,7 +50,7 @@ is generate by linum-ace-search-candidate.")
 
 (defvar linum-ace-keys
   (nconc (number-sequence ?a ?z)
-	 (number-sequence ?A ?Z))
+     (number-sequence ?A ?Z))
   "The keys to show on left fringe for unempty lines,
 each key should only an printable character.
 
@@ -61,7 +61,7 @@ linum-ace show the same keys as ace-jump-mode, you can use
 you also can build your own keys if you only want to
 lower case character and digits
    (setq linum-ace-keys (nconc (number-sequence ?0 ?9)
-			       (number-sequence ?a ?z))")
+                   (number-sequence ?a ?z))")
 
 
 ;;;; Advices
@@ -76,12 +76,12 @@ lower case character and digits
   "Search NONE-EMPTY-LINE in current window, and return the cons cell of
 candiate position and key."
   (let* ((start-point (window-start (selected-window) ))
-	 (end-point   (window-end   (selected-window) t)))
+     (end-point   (window-end   (selected-window) t)))
     (save-excursion
       (goto-char start-point)
       (loop while (search-forward-regexp "^." end-point t)
-	    for i from 0 to (length linum-ace-keys)
-	    collect (cons (line-number-at-pos (match-beginning 0)) (nth i linum-ace-keys))))))
+        for i from 0 to (length linum-ace-keys)
+        collect (cons (line-number-at-pos (match-beginning 0)) (nth i linum-ace-keys))))))
 
 (defun linum-ace-update ()
   "Update linum-ace-alist."
@@ -89,11 +89,11 @@ candiate position and key."
 
 (defun linum-ace (line-number)
   (let* ((linum-ace-char
-	  (or
-	   (cdr-safe (assoc line-number linum-ace-alist))
-	   ?\s)))
+      (or
+       (cdr-safe (assoc line-number linum-ace-alist))
+       ?\s)))
     (propertize (format "%2s " (char-to-string linum-ace-char ))
-		'face 'linum-ace-face)))
+        'face 'linum-ace-face)))
 
 ;;;; Commands
 
@@ -101,13 +101,20 @@ candiate position and key."
   (interactive "cGo to Line: ")
   (let ((line-number (car (rassoc char linum-ace-alist))))
     (if line-number
-	(goto-line line-number))))
+    (goto-line line-number))))
+
+(defun linum-ace-jump-column (char)
+  "Jump to line with the same column."
+  (interactive "cGo to Line: ")
+  (let ((column (current-column)))
+    (linum-ace-jump char)
+    (move-to-column column)))
 
 (defun linum-ace-toggle ()
   "Toggle between linum-ace or default linum-format."
   (interactive)
   (setq linum-format
-	(if (eq linum-format 'dynamic) 'linum-ace 'dynamic)))
+    (if (eq linum-format 'dynamic) 'linum-ace 'dynamic)))
 
 
 
